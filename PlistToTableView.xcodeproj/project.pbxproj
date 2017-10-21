@@ -12,7 +12,11 @@
 		0502D0931F812BE700C6FF78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502D0911F812BE700C6FF78 /* Main.storyboard */; };
 		0502D0951F812BE700C6FF78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0502D0941F812BE700C6FF78 /* Assets.xcassets */; };
 		0502D0981F812BE700C6FF78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502D0961F812BE700C6FF78 /* LaunchScreen.storyboard */; };
-		0502D0A01F812DA000C6FF78 /* Address2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0502D09F1F812DA000C6FF78 /* Address2.plist */; };
+		0512F4801F8F05CC00C2C1F0 /* Address2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0512F47F1F8F05CC00C2C1F0 /* Address2.plist */; };
+		0545202C1F9B7B350075169A /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0545202B1F9B7B350075169A /* DetailMapViewController.swift */; };
+		05A08FF01F892BBB008EB552 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A08FEF1F892BBB008EB552 /* MapKit.framework */; };
+		05A08FF21F89483D008EB552 /* TotalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A08FF11F89483D008EB552 /* TotalMapViewController.swift */; };
+		05DFBCF81F89D9680065C6FB /* pin-map-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DFBCF71F89D9680065C6FB /* pin-map-7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +27,11 @@
 		0502D0941F812BE700C6FF78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0502D0971F812BE700C6FF78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0502D0991F812BE700C6FF78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0502D09F1F812DA000C6FF78 /* Address2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Address2.plist; path = ../../MapPinPListGeoCoding/MapPinPLiist/Address2.plist; sourceTree = "<group>"; };
+		0512F47F1F8F05CC00C2C1F0 /* Address2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address2.plist; sourceTree = "<group>"; };
+		0545202B1F9B7B350075169A /* DetailMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMapViewController.swift; sourceTree = "<group>"; };
+		05A08FEF1F892BBB008EB552 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		05A08FF11F89483D008EB552 /* TotalMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalMapViewController.swift; sourceTree = "<group>"; };
+		05DFBCF71F89D9680065C6FB /* pin-map-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin-map-7.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A08FF01F892BBB008EB552 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				0502D08C1F812BE700C6FF78 /* PlistToTableView */,
 				0502D08B1F812BE700C6FF78 /* Products */,
+				05A08FEE1F892BBB008EB552 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +66,26 @@
 		0502D08C1F812BE700C6FF78 /* PlistToTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0545202B1F9B7B350075169A /* DetailMapViewController.swift */,
+				0512F47F1F8F05CC00C2C1F0 /* Address2.plist */,
+				05DFBCF71F89D9680065C6FB /* pin-map-7.png */,
 				0502D08D1F812BE700C6FF78 /* AppDelegate.swift */,
 				0502D08F1F812BE700C6FF78 /* ViewController.swift */,
 				0502D0911F812BE700C6FF78 /* Main.storyboard */,
-				0502D09F1F812DA000C6FF78 /* Address2.plist */,
+				05A08FF11F89483D008EB552 /* TotalMapViewController.swift */,
 				0502D0941F812BE700C6FF78 /* Assets.xcassets */,
 				0502D0961F812BE700C6FF78 /* LaunchScreen.storyboard */,
 				0502D0991F812BE700C6FF78 /* Info.plist */,
 			);
 			path = PlistToTableView;
+			sourceTree = "<group>";
+		};
+		05A08FEE1F892BBB008EB552 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05A08FEF1F892BBB008EB552 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0502D0A01F812DA000C6FF78 /* Address2.plist in Resources */,
+				0512F4801F8F05CC00C2C1F0 /* Address2.plist in Resources */,
 				0502D0981F812BE700C6FF78 /* LaunchScreen.storyboard in Resources */,
+				05DFBCF81F89D9680065C6FB /* pin-map-7.png in Resources */,
 				0502D0951F812BE700C6FF78 /* Assets.xcassets in Resources */,
 				0502D0931F812BE700C6FF78 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0545202C1F9B7B350075169A /* DetailMapViewController.swift in Sources */,
+				05A08FF21F89483D008EB552 /* TotalMapViewController.swift in Sources */,
 				0502D0901F812BE700C6FF78 /* ViewController.swift in Sources */,
 				0502D08E1F812BE700C6FF78 /* AppDelegate.swift in Sources */,
 			);
@@ -209,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -253,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -267,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UQ37D35Z4Z;
 				INFOPLIST_FILE = PlistToTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.ditapps.PlistToTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,6 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UQ37D35Z4Z;
 				INFOPLIST_FILE = PlistToTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.ditapps.PlistToTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +332,7 @@
 				0502D09E1F812BE700C6FF78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

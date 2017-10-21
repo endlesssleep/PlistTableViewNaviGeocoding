@@ -20,10 +20,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTableView.delegate = self
         myTableView.dataSource = self
         
+        self.title = "Busan Map Tour"
+        
         // 데이터 로드
         let path = Bundle.main.path(forResource: "Address2", ofType: "plist")
         contents = NSArray(contentsOfFile: path!)!
-        
         
     }
 
@@ -45,5 +46,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return myCell
     }
+    
+    // 위치정보 등 데이터를 DetailMapViewController에 전달
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goDetail" {
+            
+            let detailMVC = segue.destination as! DetailMapViewController
+            let selectedPath = myTableView.indexPathForSelectedRow
+            
+            let myIndexedTitle = (contents[(selectedPath?.row)!] as AnyObject).value(forKey: "title")
+            let myIndexedAddress = (contents[(selectedPath?.row)!] as AnyObject).value(forKey: "address")
+            
+            print("myIndexedTitle = \(String(describing: myIndexedTitle))")
+            
+            detailMVC.dTitle = myIndexedTitle as? String
+            detailMVC.dAddress = myIndexedAddress as? String
+            
+        } else if segue.identifier == "goTotalMap" {
+            print("this is TotlMapViewController")
+            
+            let totalMVC = segue.destination as! TotalMapViewController
+            totalMVC.dContents = contents
+            
+        }
+    }
+    
 
 }
